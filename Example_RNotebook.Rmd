@@ -43,6 +43,8 @@ data(cars)
 
 ```
 
+###this is a test to show committing and different versions
+
 Above, I changed the font (bold, italicized), but there are built-in ways to organize your document. Different headings, as seen below, are useful for guiding readers through a more "outlined" document. 
 
 # Yay for Plots!
@@ -52,6 +54,7 @@ Above, I changed the font (bold, italicized), but there are built-in ways to org
 ### Ooooooh aaaaaahhhh, in-line code
 
 There are `r nrow(cars)` records in the cars dataset. 
+
 
 ```{r Cars-speed_dist}
 
