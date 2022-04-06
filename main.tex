@@ -17,7 +17,8 @@
 % Images
 % https://www.overleaf.com/learn/latex/Inserting_Images
 % https://en.wikibooks.org/wiki/LaTeX/Floats,_Figures_and_Captions
-\usepackage{graphicx,float}
+\usepackage{graphicx,float,placeins}
+
 
 % Tables
 % https://www.overleaf.com/learn/latex/Tables
@@ -38,7 +39,7 @@
 % https://www.overleaf.com/learn/latex/Bibliography_management_in_LaTeX
 % https://en.wikibooks.org/wiki/LaTeX/Bibliography_Management
 \usepackage{biblatex}
-\addbibresource{references.bib}
+\addbibresource{Data-driven.bib}
 
 % Title content
 \title{AMATH 582 Homework 1}
@@ -51,7 +52,7 @@
 
 % Abstract
 \begin{abstract}
-    Add your abstract here. 
+    Add your abstract here. asdfkljasdlfjsdf \cite{kim_data-driven_2020}
 \end{abstract}
 
 % Introduction and Overview
@@ -73,7 +74,7 @@ Add your theoretical background here. Some example text: As we learned from our 
     f(x) = \frac{a_0}{2} + \sum_{i=1}^\infty \left(a_n\cos{nx} + b_n\sin{nx}\right) \quad x \in (-\pi,\pi].
     \label{eqn:fourierseries}
 \end{equation}
-You can reference numbered equations, figures, tables, algorithms, and code like this: Equation~\ref{eqn:fourierseries}, etc.
+You can reference numbered equations, figures, tables, algorithms, and code like this: Equation~\ref{eqn:fourierseries}, etc. 
 
 % Algorithm Implementation and Development
 \section{Algorithm Implementation and Development}
@@ -109,7 +110,7 @@ Add your computational results here. See Table~\ref{tab:mascots} for how to incl
 
 \begin{table}
     \centering
-    \begin{tabular}{rll}
+    \begin{tabular}{rll}[h]
     & Name & Years \\
     \hline
     1 & Frosty & 1922-1930  \\
@@ -134,7 +135,7 @@ Add your computational results here. See Table~\ref{tab:mascots} for how to incl
 % begin{figure}[tb] % t = top, b = bottom, etc.
 \begin{figure}
     \centering
-    \includegraphics[width=0.5\linewidth]{dubs.jpg}
+    \includegraphics[width=0.5\linewidth]{figures/midwest-2.jpeg}
     \caption{Here is a picture of Dubs \cite{webeck_2018}. Dubs did not swallow a marble.}
     \label{fig:dubs}
 \end{figure}
@@ -165,11 +166,37 @@ Add your important MATLAB functions here with a brief implementation explanation
     \item \texttt{[X,Y] = meshgrid(x,y)} returns 2-D grid coordinates based on the coordinates contained in the vectors \texttt{x} and \texttt{y}. \text{X} is a matrix where each row is a copy of \texttt{x}, and \texttt{Y} is a matrix where each column is a copy of \texttt{y}. The grid represented by the coordinates \texttt{X} and \texttt{Y} has \texttt{length(y)} rows and \texttt{length(x)} columns.  
 \end{itemize}
 
+\FloatBarrier
+\begin{table}
+    \centering
+    \begin{tabular}[H]{rll}
+    & Name & Years \\
+    \hline
+    1 & Frosty & 1922-1930  \\
+    2 & Frosty II & 1930-1936 \\
+    3 & Wasky & 1946 \\
+    4 & Wasky II & 1947 \\
+    5 & Ski & 1954 \\
+    6 & Denali & 1958 \\
+    7 & King Chinook & 1959-1968\\
+    8 & Regent Denali & 1969 \\
+    9 & Sundodger Denali & 1981-1992 \\
+    10 & King Redoubt & 1992-1998 \\
+    11 & Prince Redoubt & 1998 \\
+    12 & Spirit & 1999-2008 \\
+    13 & Dubs I & 2009-2018 \\
+    14 & Dubs II & 2018-Present
+    \end{tabular}
+    \caption{UW mascots as described in \cite{washington_huskies}.}
+    \label{tab:mascots}
+\end{table}
+\FloatBarrier
+
 % MATLAB Codes
 \section{MATLAB Code}
 Add your MATLAB code here. This section will not be included in your page limit of six pages.
 
-\begin{listing}[h]
+\begin{listing}[t]
 \inputminted{matlab}{example.m}
 \caption{Example code from external file.}
 \label{listing:examplecode}
