@@ -57,7 +57,7 @@ There are `r nrow(cars)` records in the cars dataset.
 
 
 ```{r Cars-speed_dist}
-
+#bloob
 #plot speed over distance
 plot(cars$speed,cars$dist)
 
